@@ -14,8 +14,6 @@ export { restSearchClient } from '../components/typeahead-search/http/restSearch
 
 // Export all components available in the library.
 export {
-	Vue,
-
 	WvuiButton,
 	WvuiInput,
 	WvuiIcon,
