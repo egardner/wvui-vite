@@ -1,0 +1,37 @@
+@import ( reference ) '/node_modules/wikimedia-ui-base/wikimedia-ui-base.less';
+
+@font-size-browser: 16; // Common (assumed) browser default of `16px`.
+@font-size-base: unit( ( 14 / @font-size-browser ), @wvui-unit ); // Equals `0.875em` at browser default of `16px`.
+@wvui-unit: em;
+
+@size-base: 32 / @font-size-browser / @font-size-base; // equals `2.5em`≈`32px`
+@size-indicator: 12 / @font-size-browser / @font-size-base;
+
+@color-quiet--hover: @wmui-color-base0;
+
+@line-height-component: unit( ( ( 20 / @font-size-browser ) / @font-size-base ), @wvui-unit );
+
+@border-color-input--hover: @border-color-base--active;
+
+// The size of the input icon container in the Input component, suggestion
+// thumb in the TypeaheadSuggestion component, and footer icon container in the
+// TypeaheadSearch component. We want these to be the same size so that these
+// figures vertically line up nicely when they are used together in the
+// TypeaheadSearch component.
+@size-search-figure: unit( ( ( 36 / @font-size-browser ) / @font-size-base ), @wvui-unit );
+
+@background-color-typeahead-suggestion--active: @wmui-color-accent90;
+@background-color-typeahead-suggestion-placeholder: @wmui-color-base90;
+
+@padding-horizontal-typeahead-suggestion: @padding-horizontal-base;
+@padding-vertical-typeahead-suggestion: 8px;
+@margin-end-typeahead-suggestion-thumb: @padding-horizontal-typeahead-suggestion;
+
+@border-color-typeahead-suggestion-thumb: @wmui-color-base80;
+
+@font-size-typeahead-suggestion-description: unit( ( ( 14 / @font-size-browser ) / @font-size-base ), @wvui-unit );
+@font-size-typeahead-suggestion-title: unit( ( ( 16 / @font-size-browser ) / @font-size-base ), @wvui-unit );
+
+// The width of the icon container including the padding around the icon. This
+// assumes a `@size-icon` width icon is used.
+@size-input-icon-container: @padding-horizontal-input-text * 2 + @size-icon;
