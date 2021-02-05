@@ -1,15 +1,15 @@
-const vue2 = require( 'vite-plugin-vue2' );
-const fs = require( 'fs' );
-const path = require( 'path' );
+const { createVuePlugin } = require( 'vite-plugin-vue2' );
+const { resolve } = require( 'path' );
+// const fs = require( 'fs' );
 
 /**
  * @type {import('vite').UserConfig}
  */
-module.exports = {
+export default {
 	build: {
 		// See https://vitejs.dev/guide/build.html#library-mode
 		lib: {
-			entry: path.resolve(__dirname, 'src/entries/wvui.ts'),
+			entry: resolve(__dirname, 'src/entries/wvui.ts'),
 			name: 'WVUI'
 		},
 
@@ -26,7 +26,7 @@ module.exports = {
 		}
 	},
 	plugins: [
-		vue2.createVuePlugin(),
+		createVuePlugin(),
 
 		// Explicitly emit an index.html file for demo purposes
 		// TODO: Re-enable this if we can figure out a way to emit a stand-alone
