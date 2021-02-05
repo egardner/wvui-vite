@@ -14,6 +14,9 @@
       "require": "./dist/wvui-vite.umd.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "vue": "^2.6.12"
   },
